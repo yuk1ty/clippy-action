@@ -141,7 +141,11 @@ function parse(flags: string): string[] {
     return []
   }
 
-  return flags.split(/\s+/)
+  const ret = flags.split(/\s+/)
+
+  core.info(`flags: ${ret}`)
+
+  return ret
 }
 
 interface CompilerMessage {
